@@ -1,6 +1,6 @@
 package com.ercancelik.hibernate.envers.config;
 
-import com.ercancelik.hibernate.envers.domain.UetmRevInfo;
+import com.ercancelik.hibernate.envers.domain.CustomRevisionEntity;
 import org.hibernate.envers.RevisionListener;
 
 public class UetmRevisionListener implements RevisionListener {
@@ -9,7 +9,7 @@ public class UetmRevisionListener implements RevisionListener {
 
     @Override
     public void newRevision(Object revisionEntity) {
-        UetmRevInfo exampleRevEntity = (UetmRevInfo) revisionEntity;
+        CustomRevisionEntity exampleRevEntity = (CustomRevisionEntity) revisionEntity;
         //should be retrieved from spring security
         exampleRevEntity.setUsername(USERNAME);
     }

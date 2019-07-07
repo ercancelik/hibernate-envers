@@ -10,6 +10,6 @@ import javax.persistence.Entity;
 @Data
 @Entity
 @RevisionEntity(UetmRevisionListener.class)
-public class UetmRevInfo extends DefaultRevisionEntity {
+public class CustomRevisionEntity extends DefaultRevisionEntity {
     private String username;
 }
